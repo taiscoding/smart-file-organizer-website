@@ -77,7 +77,11 @@ export default function OrganizationDemo() {
 
     const processFile = (index: number) => {
       setTimeout(() => {
-        setProcessedFiles(prev => new Set([...prev, index]))
+        setProcessedFiles(prev => {
+          const newSet = new Set(prev)
+          newSet.add(index)
+          return newSet
+        })
         setCurrentStep(index + 1)
         
         if (index < demoFiles.length - 1) {
