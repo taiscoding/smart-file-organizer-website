@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { FileText, Image as ImageIcon, Code, BookOpen, Activity, CheckCircle } from 'lucide-react'
 
 interface FileItem {
