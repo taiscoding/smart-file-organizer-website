@@ -380,7 +380,4 @@ export default function CommunityPage() {
   )
 }
 
-export const metadata = {
-  title: 'Community Features - Smart File Organizer',
-  description: 'Submit feature requests, vote on priorities, and help shape the future of Smart File Organizer based on community needs.'
-}
+

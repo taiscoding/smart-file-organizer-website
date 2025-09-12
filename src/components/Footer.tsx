@@ -74,7 +74,7 @@ export default function Footer() {
 
           {/* Newsletter Signup Column */}
           <div className="lg:col-span-1">
-            <NewsletterSignup variant="footer" className="text-white" />
+            <NewsletterSignup variant="footer" />
           </div>
 
           {/* Links Columns */}
