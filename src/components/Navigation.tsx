@@ -9,6 +9,7 @@ export default function Navigation() {
 
   const navigation = [
     { name: 'How It Works', href: '/how-it-works' },
+    { name: 'Community', href: '/community' },
     { name: 'Research', href: '/research' },
     { name: 'Blog', href: '/blog' },
     { name: 'Roadmap', href: '/roadmap' },

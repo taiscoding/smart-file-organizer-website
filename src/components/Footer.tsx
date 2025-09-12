@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Github, Twitter, Mail, Heart } from 'lucide-react'
+import NewsletterSignup from './NewsletterSignup'
 
 export default function Footer() {
   const footerLinks = {
@@ -10,10 +11,10 @@ export default function Footer() {
       { name: 'Changelog', href: '/changelog' },
     ],
     Resources: [
-      { name: 'Documentation', href: '/docs' },
+      { name: 'GitHub Repository', href: 'https://github.com/taiscoding/smart-file-organizer' },
       { name: 'Research', href: '/research' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Community Features', href: '/community' },
     ],
     Community: [
       { name: 'GitHub', href: 'https://github.com/taiscoding/smart-file-organizer' },
@@ -26,10 +27,10 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Brand Column */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <Link href="/" className="flex items-center mb-4">
               <div className="bg-blue-600 text-white p-2 rounded-lg mr-3">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -40,9 +41,9 @@ export default function Footer() {
               <span className="text-xl font-bold">Smart File Organizer</span>
             </Link>
             
-            <p className="text-gray-300 mb-6 max-w-md">
+            <p className="text-gray-300 mb-6">
               Transform digital chaos into organized clarity. Intelligent file organization 
-              that learns from your workflow and saves you hours every week.
+              that learns from your workflow.
             </p>
 
             <div className="flex space-x-4">
@@ -69,6 +70,11 @@ export default function Footer() {
                 <Mail className="w-5 h-5" />
               </Link>
             </div>
+          </div>
+
+          {/* Newsletter Signup Column */}
+          <div className="lg:col-span-1">
+            <NewsletterSignup variant="footer" className="text-white" />
           </div>
 
           {/* Links Columns */}
