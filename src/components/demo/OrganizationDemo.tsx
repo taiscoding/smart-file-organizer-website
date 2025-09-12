@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { FileText, Image, Code, BookOpen, Activity, CheckCircle } from 'lucide-react'
+import { FileText, Image as ImageIcon, Code, BookOpen, Activity, CheckCircle } from 'lucide-react'
 
 interface FileItem {
   name: string
@@ -65,7 +65,7 @@ export default function OrganizationDemo() {
       case 'medical': return <Activity className="w-5 h-5 text-red-600" />
       case 'research': return <BookOpen className="w-5 h-5 text-blue-600" />
       case 'code': return <Code className="w-5 h-5 text-green-600" />
-      case 'image': return <Image className="w-5 h-5 text-purple-600" />
+      case 'image': return <ImageIcon className="w-5 h-5 text-purple-600" />
       case 'document': return <FileText className="w-5 h-5 text-gray-600" />
     }
   }

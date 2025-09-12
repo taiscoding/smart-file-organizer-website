@@ -1,13 +1,31 @@
 import Link from 'next/link'
 import { CheckCircle, Clock, Lightbulb, ArrowRight } from 'lucide-react'
 
+type RoadmapStatus = 'completed' | 'in_progress' | 'planned' | 'research' | 'considering'
+
+interface RoadmapItem {
+  status: RoadmapStatus
+  version: string
+  title: string
+  description: string
+  features: string[]
+  eta?: string
+}
+
+interface CommunityRequest {
+  title: string
+  votes: number
+  status: RoadmapStatus
+  description: string
+}
+
 export const metadata = {
   title: 'Roadmap - Smart File Organizer',
   description: 'See what\'s planned for Smart File Organizer, including upcoming features, research integrations, and community-requested enhancements.',
 }
 
 export default function RoadmapPage() {
-  const roadmapItems = [
+  const roadmapItems: RoadmapItem[] = [
     {
       status: 'completed',
       version: 'v1.0',
@@ -79,7 +97,7 @@ export default function RoadmapPage() {
     }
   ]
 
-  const communityRequests = [
+  const communityRequests: CommunityRequest[] = [
     { 
       title: 'Windows PowerShell Support', 
       votes: 47, 
@@ -105,8 +123,6 @@ export default function RoadmapPage() {
       description: 'User-defined category templates for specific workflows'
     }
   ]
-
-  type RoadmapStatus = 'completed' | 'in_progress' | 'planned' | 'research' | 'considering';
 
   const getStatusInfo = (status: RoadmapStatus) => {
     switch (status) {
