@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { ThumbsUp, MessageCircle, Plus, Lightbulb, Clock, CheckCircle, Star, Users } from 'lucide-react'
 import Link from 'next/link'
 
