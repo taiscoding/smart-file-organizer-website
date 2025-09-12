@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { ChevronRight, Download, Github, Star, FileText, Brain, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import OrganizationDemo from './demo/OrganizationDemo'
 
 export default function HomePage() {
   const [stats, setStats] = useState({ stars: 0, downloads: 0, users: 0 })
@@ -188,8 +189,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Live Demo Section */}
       <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-title">
+              See the Intelligence in Action
+            </h2>
+            <p className="section-subtitle">
+              Watch Smart File Organizer process real-world files with domain-specific understanding.
+              This interactive demonstration shows how medical, research, and technical files are categorized.
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <OrganizationDemo />
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-title">
@@ -216,7 +236,7 @@ export default function HomePage() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-title">
@@ -273,7 +293,7 @@ export default function HomePage() {
       </section>
 
       {/* Research Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-title">Research-Backed Organization</h2>

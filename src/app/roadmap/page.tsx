@@ -106,7 +106,9 @@ export default function RoadmapPage() {
     }
   ]
 
-  const getStatusInfo = (status) => {
+  type RoadmapStatus = 'completed' | 'in_progress' | 'planned' | 'research' | 'considering';
+
+  const getStatusInfo = (status: RoadmapStatus) => {
     switch (status) {
       case 'completed':
         return { icon: CheckCircle, color: 'text-green-600 bg-green-50 border-green-200', label: 'Completed' }
